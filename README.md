@@ -1,11 +1,13 @@
 
-🧳 Trip Management API
+#🧳 Trip Management API
 
-A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to manage trips — including CRUD operations, search, filtering, pagination, and Swagger documentation.
+##A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to manage trips — including CRUD operations, search, filtering, pagination, and Swagger documentation. 
 
 
+        ----------------------------------------------------------------------------------------------------------------
 
-🚀 Features
+
+#🚀 Features
 
 ✅ CRUD operations (Create / Read / Update / Delete)
 ✅ Search trips by destination
@@ -16,8 +18,10 @@ A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to ma
 ✅ Unit tests (JUnit + Mockito)
 
 
+         ----------------------------------------------------------------------------------------------------------------
 
-🧠 Tech Stack
+
+#🧠 Tech Stack
 Component	Technology
 Language	Java 17
 Framework	Spring Boot 3.x
@@ -29,6 +33,10 @@ Tests	JUnit + Mockito
 
 
 
+         ----------------------------------------------------------------------------------------------------------------
+
+
+
 #📚 *Improtant Note
 Firstly if you create your spring boot project choose version 3.1.4.
 Also If you use Swagger UI so choose dependecy version 2.3.0.
@@ -37,14 +45,19 @@ Because some times version are different so your appliction are not work properl
 And Also if you used this code and run in your application throw the link that i provide in below at Access point
 
 
+        ---------------------------------------------------------------------------------------------------------------- 
+      
 
-⚙️ Setup Instructions
+#⚙️ Setup Instructions
+
 1️⃣ Prerequisites
 
 Install Java 17+, Maven 3.8+, and MySQL
 Create a database:
 CREATE DATABASE tripdb;
 
+
+        ----------------------------------------------------------------------------------------------------------------
 
 
 2️⃣ Configure Database
@@ -65,15 +78,19 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 
 
+        ----------------------------------------------------------------------------------------------------------------
 
+ 
 3️⃣ Run the Application
 mvn clean spring-boot:run
 or in your IDE → run TripManagementApplication.java
 you can use any IDE for this project like eclips and IntelliJ IDEA 
 
 
+        ----------------------------------------------------------------------------------------------------------------
 
-🌐 Access API
+
+#🌐 Access API
 
 Once running, open:
 
@@ -82,8 +99,10 @@ Once running, open:
 📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
 
 
+       ----------------------------------------------------------------------------------------------------------------
 
-📚 API Endpoints
+
+#📚 API Endpoints
 
 Method	    Endpoint	                                            Description
 POST	      /api/trips	                                          Create a new trip
@@ -97,7 +116,10 @@ GET	        /api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in da
 GET	        /api/trips/summary	                                  Get total/min/max/avg price summary
 
 
-🧾 Sample Request that you can use for test the project are worked 
+       ----------------------------------------------------------------------------------------------------------------
+
+
+#🧾 Sample Request that you can use for test the project are worked 
 POST /api/trips
 
 {
@@ -120,7 +142,11 @@ Response:
   "status": "PLANNED"
 }
 
-🧪 Testing
+
+        ----------------------------------------------------------------------------------------------------------------      
+
+
+#🧪 Testing
 
 Run unit tests:
 
@@ -129,7 +155,11 @@ mvn test
 
 Unit tests are written with JUnit 5 and Mockito for service-layer verification.
 
-🗃️ Database Script
+
+        ----------------------------------------------------------------------------------------------------------------
+
+
+#🗃️ Database Script
 
 SQL file: src/main/resources/tripdb.sql
 
@@ -140,7 +170,11 @@ VALUES
 ('Paris', '2025-09-10', '2025-09-20', 1500.00, 'PLANNED'),
 ('London', '2025-08-01', '2025-08-10', 1200.00, 'COMPLETED');
 
-## 🧪 Postman Collection
+
+         ----------------------------------------------------------------------------------------------------------------
+
+
+# 🧪 Postman Collection
 
 A ready-to-use Postman collection is included for easy API testing.
 
