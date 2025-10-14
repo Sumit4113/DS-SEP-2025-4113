@@ -1,70 +1,86 @@
-🧳 Trip Management API
-A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to manage trips. It includes comprehensive features like CRUD operations, search, filtering, pagination, and Swagger documentation.
+# 🧳 Trip Management API
 
-🧠 Tech Stack
-This project utilizes a modern Java-based stack:
+## A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL  
+to manage trips — including CRUD operations, search, filtering, pagination, and Swagger documentation.
 
-Component	Technology
-Language	Java 17
-Framework	Spring Boot 3.x
-ORM	Hibernate / Spring Data JPA
-Database	MySQL
-Build Tool	Maven
-Docs	Swagger / OpenAPI
-Tests	JUnit + Mockito
+---
 
-Export to Sheets
-🚀 Features
-The API provides the following core functionalities:
+## 🚀 Features
 
-✅ CRUD Operations: Create, Read, Update, and Delete trips.
+✅ CRUD operations (Create / Read / Update / Delete)  
+✅ Search trips by destination  
+✅ Filter trips by status (PLANNED, ONGOING, COMPLETED)  
+✅ Pagination & sorting support  
+✅ Custom validations & global exception handling  
+✅ Swagger (OpenAPI 3.0) documentation  
+✅ Unit tests (JUnit + Mockito)
 
-✅ Search & Filtering:
+---
 
-Search trips by destination.
+## 🧠 Tech Stack
 
-Filter trips by status (PLANNED, ONGOING, COMPLETED).
+| Component | Technology |
+|------------|-------------|
+| **Language** | Java 17 |
+| **Framework** | Spring Boot 3.x |
+| **ORM** | Hibernate / Spring Data JPA |
+| **Database** | MySQL |
+| **Build Tool** | Maven |
+| **Docs** | Swagger / OpenAPI |
+| **Tests** | JUnit + Mockito |
 
-✅ Data Handling:
+---
 
-Pagination & sorting support.
+## 📚 Important Note
 
-Custom validations & global exception handling.
+🟡 **Project Version Compatibility:**
+- Use **Spring Boot 3.1.4**
+- Use **Swagger (springdoc-openapi) version 2.3.0**
 
-✅ Documentation & Testing:
+If versions don’t match, Swagger UI or some endpoints may not work properly.
 
-Swagger (OpenAPI 3.0) documentation.
+👉 After running the application, access it using the link in the **Access API** section below.
 
-Unit tests (JUnit + Mockito).
+---
 
-⚠️ Important Version Note
-To ensure proper functionality, especially for the Swagger UI, adhere to these specific versions:
+## ⚙️ Setup Instructions
 
-Use Spring Boot 3.1.4.
-
-Use Swagger (springdoc-openapi) version 2.3.0.
-
-If these versions do not match, the Swagger UI or some endpoints may not work correctly.
-
-⚙️ Setup Instructions
-1️⃣ Prerequisites
-You must have the following installed:
-
-Java 17+
-
-Maven 3.8+
-
-MySQL
-
-Create the necessary database in MySQL:
-
-SQL
-
+### 1️⃣ Prerequisites
+Install **Java 17+**, **Maven 3.8+**, and **MySQL**  
+Then create a database:
+```sql
 CREATE DATABASE tripdb;
-2️⃣ Configure Database
-Edit the configuration file at src/main/resources/application.properties with your MySQL details:
 
-Properties
+      
+---
+
+
+#📚 *Improtant Note
+Firstly if you create your spring boot project choose version 3.1.4.
+Also If you use Swagger UI so choose dependecy version 2.3.0.
+Because some times version are different so your appliction are not work properly 
+
+And Also if you used this code and run in your application throw the link that i provide in below at Access point
+
+
+---
+      
+
+#⚙️ Setup Instructions
+
+1️⃣ Prerequisites
+
+Install Java 17+, Maven 3.8+, and MySQL
+Create a database:
+CREATE DATABASE tripdb;
+
+
+---
+
+
+2️⃣ Configure Database
+
+Edit your src/main/resources/application.properties:
 
 #SERVER
 server.port=8080
@@ -78,42 +94,51 @@ spring.datasource.password=your_password
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
+
+
+---
+
+ 
 3️⃣ Run the Application
-You can start the Spring Boot application using one of the following methods:
-
-Maven: Run the command:
-
-Bash
-
 mvn clean spring-boot:run
-IDE: Run the main class, TripManagementApplication.java, from your preferred IDE (e.g., Eclipse, IntelliJ IDEA).
+or in your IDE → run TripManagementApplication.java
+you can use any IDE for this project like eclips and IntelliJ IDEA 
 
-🌐 Access API
-Once the application is running, you can access the API documentation and endpoints:
+
+---
+
+
+#🌐 Access API
+
+Once running, open:
 
 🧭 Swagger UI: http://localhost:8080/swagger-ui.html
 
-📄 OpenAPI JSON: http://localhost:8080/swagger/api-point
+📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
 
-📚 API Endpoints
-Method	Endpoint	Description
-POST	/api/trips	Create a new trip
-GET	/api/trips	Get all trips (with pagination)
-GET	/api/trips/{id}	Get trip by ID
-PUT	/api/trips/{id}	Update a trip
-DELETE	/api/trips/{id}	Delete a trip
-GET	/api/trips/search?destination=Paris	Search by destination
-GET	/api/trips/filter?status=PLANNED	Filter by status
-GET	/api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in date range
-GET	/api/trips/summary	Get total/min/max/avg price summary
 
-Export to Sheets
-🧾 Sample Request
-Use this sample payload to test the POST /api/trips endpoint:
+---
 
-Request Body:
 
-JSON
+#📚 API Endpoints
+
+Method	    Endpoint	                                            Description
+POST	      /api/trips	                                          Create a new trip
+GET	        /api/trips	                                          Get all trips (with pagination)
+GET       	/api/trips/{id}                                     	Get trip by ID
+PUT       	/api/trips/{id}     	                                Update a trip
+DELETE	    /api/trips/{id}                                     	Delete a trip
+GET	        /api/trips/search?destination=Paris	                  Search by destination
+GET	        /api/trips/filter?status=PLANNED	                    Filter by status
+GET	        /api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in date range
+GET	        /api/trips/summary	                                  Get total/min/max/avg price summary
+
+
+---
+
+
+#🧾 Sample Request that you can use for test the project are worked 
+POST /api/trips
 
 {
   "destination": "Paris",
@@ -122,9 +147,9 @@ JSON
   "price": 1500.00,
   "status": "PLANNED"
 }
-Successful Response:
 
-JSON
+
+Response:
 
 {
   "id": 1,
@@ -134,36 +159,27 @@ JSON
   "price": 1500.0,
   "status": "PLANNED"
 }
-🧪 Testing
-Unit Tests
-Unit tests are written with JUnit 5 and Mockito for service-layer verification.
 
-To run the unit tests, use:
 
-Bash
+---     
+
+
+#🧪 Testing
+
+Run unit tests:
 
 mvn test
-Postman Collection
-A ready-to-use Postman collection is provided for easy API testing:
 
-File: TripManagementAPI.postman_collection.json
 
-Path: Project Root Folder
+Unit tests are written with JUnit 5 and Mockito for service-layer verification.
 
-To Use:
 
-Open Postman → Import → Upload Files.
+---
 
-Choose TripManagementAPI.postman_collection.json.
 
-Start testing your endpoints.
+#🗃️ Database Script
 
-📥 Download Collection (from GitHub)
-
-🗃️ Database Script
-The following SQL script is available at src/main/resources/tripdb.sql for initial setup and sample data:
-
-SQL
+SQL file: src/main/resources/tripdb.sql
 
 CREATE DATABASE tripdb;
 
@@ -172,13 +188,30 @@ VALUES
 ('Paris', '2025-09-10', '2025-09-20', 1500.00, 'PLANNED'),
 ('London', '2025-08-01', '2025-08-10', 1200.00, 'COMPLETED');
 
-👨‍💻 Author
-Sumit Jamod
 
+---
+
+
+# 🧪 Postman Collection
+
+A ready-to-use Postman collection is included for easy API testing.
+
+📄 **File:** `TripManagementAPI.postman_collection.json`  
+📍 **Path:** Project Root Folder  
+
+To use:
+1. Open Postman → Import → Upload Files  
+2. Choose `TripManagementAPI.postman_collection.json`  
+3. Start testing your endpoints
+
+📥 [Download Collection (from GitHub)](https://github.com/Sumit4113/DS-SEP-2025-4113/raw/main/TripManagementAPI.postman_collection.json)
+
+---
+
+👨‍💻 Author
+
+Sumit Jamod
 📧 jdsumit01@gmail.com
 
-Project Details:
-
 🗓️ October 2025
-
 Assignment by Badkul Technology Pvt. Ltd.
