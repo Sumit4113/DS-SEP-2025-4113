@@ -1,40 +1,58 @@
+# 🧳 Trip Management API
 
-#🧳 Trip Management API
+## A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL  
+to manage trips — including CRUD operations, search, filtering, pagination, and Swagger documentation.
 
-##A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to manage trips — including CRUD operations, search, filtering, pagination, and Swagger documentation. 
+---
 
+## 🚀 Features
 
-        ----------------------------------------------------------------------------------------------------------------
-
-
-#🚀 Features
-
-✅ CRUD operations (Create / Read / Update / Delete)
-✅ Search trips by destination
-✅ Filter trips by status (PLANNED, ONGOING, COMPLETED)
-✅ Pagination & sorting support
-✅ Custom validations & global exception handling
-✅ Swagger (OpenAPI 3.0) documentation
+✅ CRUD operations (Create / Read / Update / Delete)  
+✅ Search trips by destination  
+✅ Filter trips by status (PLANNED, ONGOING, COMPLETED)  
+✅ Pagination & sorting support  
+✅ Custom validations & global exception handling  
+✅ Swagger (OpenAPI 3.0) documentation  
 ✅ Unit tests (JUnit + Mockito)
 
+---
 
-         ----------------------------------------------------------------------------------------------------------------
+## 🧠 Tech Stack
 
+| Component | Technology |
+|------------|-------------|
+| **Language** | Java 17 |
+| **Framework** | Spring Boot 3.x |
+| **ORM** | Hibernate / Spring Data JPA |
+| **Database** | MySQL |
+| **Build Tool** | Maven |
+| **Docs** | Swagger / OpenAPI |
+| **Tests** | JUnit + Mockito |
 
-#🧠 Tech Stack
-Component	Technology
-Language	Java 17
-Framework	Spring Boot 3.x
-ORM	Hibernate / Spring Data JPA
-Database	MySQL
-Build Tool	Maven
-Docs	Swagger / OpenAPI
-Tests	JUnit + Mockito
+---
 
+## 📚 Important Note
 
+🟡 **Project Version Compatibility:**
+- Use **Spring Boot 3.1.4**
+- Use **Swagger (springdoc-openapi) version 2.3.0**
 
-         ----------------------------------------------------------------------------------------------------------------
+If versions don’t match, Swagger UI or some endpoints may not work properly.
 
+👉 After running the application, access it using the link in the **Access API** section below.
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Prerequisites
+Install **Java 17+**, **Maven 3.8+**, and **MySQL**  
+Then create a database:
+```sql
+CREATE DATABASE tripdb;
+
+      
+---
 
 
 #📚 *Improtant Note
@@ -45,7 +63,7 @@ Because some times version are different so your appliction are not work properl
 And Also if you used this code and run in your application throw the link that i provide in below at Access point
 
 
-        ---------------------------------------------------------------------------------------------------------------- 
+---
       
 
 #⚙️ Setup Instructions
@@ -57,7 +75,7 @@ Create a database:
 CREATE DATABASE tripdb;
 
 
-        ----------------------------------------------------------------------------------------------------------------
+---
 
 
 2️⃣ Configure Database
@@ -78,7 +96,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 
 
-        ----------------------------------------------------------------------------------------------------------------
+---
 
  
 3️⃣ Run the Application
@@ -87,7 +105,7 @@ or in your IDE → run TripManagementApplication.java
 you can use any IDE for this project like eclips and IntelliJ IDEA 
 
 
-        ----------------------------------------------------------------------------------------------------------------
+---
 
 
 #🌐 Access API
@@ -99,7 +117,7 @@ Once running, open:
 📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
 
 
-       ----------------------------------------------------------------------------------------------------------------
+---
 
 
 #📚 API Endpoints
@@ -116,7 +134,7 @@ GET	        /api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in da
 GET	        /api/trips/summary	                                  Get total/min/max/avg price summary
 
 
-       ----------------------------------------------------------------------------------------------------------------
+---
 
 
 #🧾 Sample Request that you can use for test the project are worked 
@@ -143,7 +161,7 @@ Response:
 }
 
 
-        ----------------------------------------------------------------------------------------------------------------      
+---     
 
 
 #🧪 Testing
@@ -156,7 +174,7 @@ mvn test
 Unit tests are written with JUnit 5 and Mockito for service-layer verification.
 
 
-        ----------------------------------------------------------------------------------------------------------------
+---
 
 
 #🗃️ Database Script
@@ -171,7 +189,7 @@ VALUES
 ('London', '2025-08-01', '2025-08-10', 1200.00, 'COMPLETED');
 
 
-         ----------------------------------------------------------------------------------------------------------------
+---
 
 
 # 🧪 Postman Collection
