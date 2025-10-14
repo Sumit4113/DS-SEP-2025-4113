@@ -7,9 +7,6 @@ A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to ma
 
 
 
-
-
-
 🚀 Features
 
 ✅ CRUD operations (Create / Read / Update / Delete)
@@ -20,6 +17,8 @@ A RESTful web service built with Spring Boot 3, Hibernate (JPA), and MySQL to ma
 ✅ Swagger (OpenAPI 3.0) documentation
 ✅ Unit tests (JUnit + Mockito)
 
+
+
 🧠 Tech Stack
 Component	Technology
 Language	Java 17
@@ -29,14 +28,18 @@ Database	MySQL
 Build Tool	Maven
 Docs	Swagger / OpenAPI
 Tests	JUnit + Mockito
+
+
+
 ⚙️ Setup Instructions
+
 1️⃣ Prerequisites
 
 Install Java 17+, Maven 3.8+, and MySQL
-
 Create a database:
-
 CREATE DATABASE tripdb;
+
+
 
 2️⃣ Configure Database
 
@@ -72,8 +75,9 @@ GET	/api/trips/search?destination=Paris	Search by destination
 GET	/api/trips/filter?status=PLANNED	Filter by status
 GET	/api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in date range
 GET	/api/trips/summary	Get total/min/max/avg price summary
-🧾 Sample Request
 
+
+🧾 Sample Request
 POST /api/trips
 
 {
@@ -116,20 +120,12 @@ VALUES
 ('Paris', '2025-09-10', '2025-09-20', 1500.00, 'PLANNED'),
 ('London', '2025-08-01', '2025-08-10', 1200.00, 'COMPLETED');
 
-📦 Deliverables
-
-✅ Complete Spring Boot project
-✅ Public GitHub repository named DS-SEP-2025-<RegistrationNumber>
-✅ README.md (this file)
-✅ Database script (tripdb.sql)
-✅ Postman collection (optional)
-
 📸 Swagger Preview
 
 👨‍💻 Author
 
-Your Name
-📧 your.email@example.com
+Sumit Jamod
+📧 jdsumit01@gmail.com
 
 🗓️ October 2025
 Assignment by Badkul Technology Pvt. Ltd.
