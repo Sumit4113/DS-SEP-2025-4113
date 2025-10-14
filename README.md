@@ -46,7 +46,7 @@ If versions don’t match, Swagger UI or some endpoints may not work properly.
 ---
 
 
-#🌐 Access API
+##🌐 Access API
 
 Once running, open:
 
@@ -58,7 +58,7 @@ Once running, open:
 ---
 
 
-#📚 API Endpoints
+##📚 API Endpoints
 
 Method	    Endpoint	                                            Description
 POST	      /api/trips	                                          Create a new trip
@@ -83,21 +83,8 @@ Then create a database:
 CREATE DATABASE tripdb;
 ``
 
-      
 
----
-      
-
-#⚙️ Setup Instructions
-
-1️⃣ Prerequisites
-
-Install Java 17+, Maven 3.8+, and MySQL
-Create a database:
-CREATE DATABASE tripdb;
-
-
----
+---   
 
 
 2️⃣ Configure Database
@@ -130,7 +117,7 @@ you can use any IDE for this project like eclips and IntelliJ IDEA
 ---
 
 
-#🧾 Sample Request that you can use for test the project are worked 
+##🧾 Sample Request that you can use for test the project are worked 
 POST /api/trips
 
 {
@@ -157,7 +144,7 @@ Response:
 ---     
 
 
-#🧪 Testing
+##🧪 Testing
 
 Run unit tests:
 
@@ -170,7 +157,7 @@ Unit tests are written with JUnit 5 and Mockito for service-layer verification.
 ---
 
 
-#🗃️ Database Script
+##🗃️ Database Script
 
 SQL file: src/main/resources/tripdb.sql
 
@@ -185,7 +172,7 @@ VALUES
 ---
 
 
-# 🧪 Postman Collection
+## 🧪 Postman Collection
 
 A ready-to-use Postman collection is included for easy API testing.
 
@@ -203,7 +190,7 @@ To use:
 ---
 
 
-👨‍💻 Author
+##👨‍💻 Author
 
 Sumit Jamod
 📧 jdsumit01@gmail.com
