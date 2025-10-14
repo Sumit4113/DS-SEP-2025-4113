@@ -31,6 +31,7 @@ to manage trips — including CRUD operations, search, filtering, pagination, an
 
 ---
 
+
 ## 📚 Important Note
 
 🟡 **Project Version Compatibility:**
@@ -41,27 +42,48 @@ If versions don’t match, Swagger UI or some endpoints may not work properly.
 
 👉 After running the application, access it using the link in the **Access API** section below.
 
+
 ---
+
+
+#🌐 Access API
+
+Once running, open:
+
+🧭 Swagger UI: http://localhost:8080/swagger-ui.html
+
+📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
+
+
+---
+
+
+#📚 API Endpoints
+
+Method	    Endpoint	                                            Description
+POST	      /api/trips	                                          Create a new trip
+GET	        /api/trips	                                          Get all trips (with pagination)
+GET       	/api/trips/{id}                                     	Get trip by ID
+PUT       	/api/trips/{id}     	                                Update a trip
+DELETE	    /api/trips/{id}                                     	Delete a trip
+GET	        /api/trips/search?destination=Paris	                  Search by destination
+GET	        /api/trips/filter?status=PLANNED	                    Filter by status
+GET	        /api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in date range
+GET	        /api/trips/summary	                                  Get total/min/max/avg price summary
+
+
+---
+
 
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Prerequisites
 Install **Java 17+**, **Maven 3.8+**, and **MySQL**  
 Then create a database:
-```sql
 CREATE DATABASE tripdb;
+``
 
       
----
-
-
-#📚 *Improtant Note
-Firstly if you create your spring boot project choose version 3.1.4.
-Also If you use Swagger UI so choose dependecy version 2.3.0.
-Because some times version are different so your appliction are not work properly 
-
-And Also if you used this code and run in your application throw the link that i provide in below at Access point
-
 
 ---
       
@@ -103,35 +125,6 @@ spring.jpa.hibernate.ddl-auto=update
 mvn clean spring-boot:run
 or in your IDE → run TripManagementApplication.java
 you can use any IDE for this project like eclips and IntelliJ IDEA 
-
-
----
-
-
-#🌐 Access API
-
-Once running, open:
-
-🧭 Swagger UI: http://localhost:8080/swagger-ui.html
-
-📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
-
-
----
-
-
-#📚 API Endpoints
-
-Method	    Endpoint	                                            Description
-POST	      /api/trips	                                          Create a new trip
-GET	        /api/trips	                                          Get all trips (with pagination)
-GET       	/api/trips/{id}                                     	Get trip by ID
-PUT       	/api/trips/{id}     	                                Update a trip
-DELETE	    /api/trips/{id}                                     	Delete a trip
-GET	        /api/trips/search?destination=Paris	                  Search by destination
-GET	        /api/trips/filter?status=PLANNED	                    Filter by status
-GET	        /api/trips/daterange?start=2025-09-01&end=2025-09-30	Get trips in date range
-GET	        /api/trips/summary	                                  Get total/min/max/avg price summary
 
 
 ---
@@ -206,7 +199,9 @@ To use:
 
 📥 [Download Collection (from GitHub)](https://github.com/Sumit4113/DS-SEP-2025-4113/raw/main/TripManagementAPI.postman_collection.json)
 
+
 ---
+
 
 👨‍💻 Author
 
