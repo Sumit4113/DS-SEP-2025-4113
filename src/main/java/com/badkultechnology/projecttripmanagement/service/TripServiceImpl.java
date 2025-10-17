@@ -1,12 +1,12 @@
-package com.projecttrip.service;
+package com.badkultechnology.projecttripmanagement.service;
 
-import com.projecttrip.DTO.TripDTO;
-import com.projecttrip.entity.Trip;
-import com.projecttrip.entity.TripStatus;
-import com.projecttrip.exception.ResourceNotFoundException;
-import com.projecttrip.repository.TripRepo;
+import com.badkultechnology.projecttripmanagement.DTO.TripDTO;
+import com.badkultechnology.projecttripmanagement.entity.Trip;
+import com.badkultechnology.projecttripmanagement.entity.TripStatus;
+import com.badkultechnology.projecttripmanagement.exception.ResourceNotFoundException;
+import com.badkultechnology.projecttripmanagement.repository.TripRepo;
+import com.badkultechnology.projecttripmanagement.service.TripService;
 
-import com.projecttrip.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

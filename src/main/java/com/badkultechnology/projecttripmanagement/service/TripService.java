@@ -1,10 +1,10 @@
-package com.projecttrip.service;
+package com.badkultechnology.projecttripmanagement.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.projecttrip.DTO.TripDTO;
-import com.projecttrip.entity.TripStatus;
+import com.badkultechnology.projecttripmanagement.DTO.TripDTO;
+import com.badkultechnology.projecttripmanagement.entity.TripStatus;
 
 import java.time.LocalDate;
 

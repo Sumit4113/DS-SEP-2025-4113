@@ -1,7 +1,7 @@
-package com.projecttrip.validation;
+package com.badkultechnology.projecttripmanagement.validation;
 
-import com.projecttrip.DTO.EndDateAfterStartDate;
-import com.projecttrip.DTO.TripDTO;
+import com.badkultechnology.projecttripmanagement.DTO.EndDateAfterStartDate;
+import com.badkultechnology.projecttripmanagement.DTO.TripDTO;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

@@ -1,4 +1,4 @@
-package com.projecttrip.config;
+package com.badkultechnology.projecttripmanagement.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenApiConfig {
-
+ 
+	//This configuration pakage is used for swagger OpenApi to use
     @Bean
     public OpenAPI tripApi() {
         return new OpenAPI()

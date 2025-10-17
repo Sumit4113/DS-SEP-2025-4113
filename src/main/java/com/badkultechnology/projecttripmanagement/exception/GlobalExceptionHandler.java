@@ -1,4 +1,4 @@
-package com.projecttrip.exception;
+package com.badkultechnology.projecttripmanagement.exception;
 
 
 import org.springframework.http.HttpStatus;
@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
 import java.util.Map;
+
+//This class for Handle all exceptions in one place
+//Instead of writing try–catch everywhere in the controllers and services classes,
+//that the Spring Boot automatically catch them here.
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

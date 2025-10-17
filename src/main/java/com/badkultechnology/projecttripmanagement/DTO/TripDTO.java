@@ -1,56 +1,32 @@
-package com.projecttrip.entity;
+package com.badkultechnology.projecttripmanagement.DTO;
 
+import jakarta.validation.constraints.*;
 import java.time.LocalDate;
 
+import com.badkultechnology.projecttripmanagement.entity.TripStatus;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+@EndDateAfterStartDate
+public class TripDTO {
 
-
-
-import jakarta.persistence.*;
-
-
-@Entity
-@Table(name = "trip")
-public class Trip {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
     @NotBlank(message = "Destination is required")
     private String destination;
 
-    @Column(name = "start_date", nullable = false)
     @NotNull(message = "Start date is required")
     private LocalDate startDate;
 
-    @Column(name = "end_date", nullable = false)
     @NotNull(message = "End date is required")
     private LocalDate endDate;
-    
-    
-    @Column(nullable = false)
+
     @NotNull(message = "Price is required")
     @Positive(message = "Price must be positive")
     private Double price;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
     @NotNull(message = "Status is required")
     private TripStatus status;
 
     // getters and setters
-
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 

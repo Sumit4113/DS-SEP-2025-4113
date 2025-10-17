@@ -1,4 +1,4 @@
-package com.projecttrip.repository;
+package com.badkultechnology.projecttripmanagement.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.projecttrip.entity.Trip;
-import com.projecttrip.entity.TripStatus;
+import com.badkultechnology.projecttripmanagement.entity.Trip;
+import com.badkultechnology.projecttripmanagement.entity.TripStatus;
 
 import java.time.LocalDate;
 
