@@ -50,7 +50,7 @@ If versions don’t match, Swagger UI or some endpoints may not work properly.
 
 Once running local server, open:
 
-🧭 Swagger UI: http://localhost:8080/swagger-ui.html
+🧭 Swagger UI: http://localhost:8080/
 
 📄 OpenAPI JSON: http://localhost:8080//swagger/api-point
 
